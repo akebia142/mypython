@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/intro_index.css" />
+    <link rel="stylesheet" href="../static/css/regression_coin.css" />
+    <script src="{{url_for('static',filename='js/regression_coin.js')}}"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <title>Document</title>
+  </head>
+
+  <body id="bg" onload="get_coinname()">
+    <h1>
+      ╰(*°▽°*)╯(●'◡'●)인공지능솔루션 적대적공격 위협분석 AI보안전문가 2회차
+    </h1>
+    <div id="main_intro" class="content">
+      <h2
+        style="
+          margin-bottom: 3rem;
+          text-align: center;
+          margin: 1rem 0;
+          padding: 1rem 0;
+          color: coral;
+        "
+      >
+        다중선형회귀분석 실전모델 구현(가상화폐 빗썸 api 사용)
+      </h2>
+      <div id="mycontent">
+        <legend>분석 정보 입력</legend>
+        <div class="con">
+          <label for="coinname">코인이름</label>
+          <select id="coinname" name="coinname"></select>
+        </div>
+        <div class="con">
+          <label for="timegap">연속분석할구간(일)</label>
+          <input id="timegap" type="number" name="timegap" value="1" />
+        </div>
+        <div class="con">
+          <button id="anal_btn" type="button" style="padding: 0.5rem">
+            분석하기
+          </button>
+        </div>
+      </div>
+      <div
+        id="res_contain"
+        style="
+          width: 99vw;
+          height: calc(99vh-8rem);
+          background: whitesmoke;
+          display: none;
+          position: fixed;
+          overflow-y: auto;
+        "
+      >
+        <span
+          style="
+            position: absolute;
+            right: 0.5rem;
+            top: 0.5rem;
+            font-size: 2rem;
+          "
+          id="closeBtn"
+          class="material-symbols-outlined"
+          >cancel
+        </span>
+        <div id="anal_data"></div>
+        <div id="result" style="overflow-y: auto"></div>
+      </div>
+    </div>
+  </body>
+</html>

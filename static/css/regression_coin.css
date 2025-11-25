@@ -1,0 +1,52 @@
+legend {
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+}
+
+select {
+  width: 8rem;
+}
+
+#mycontent .con {
+  font-size: 1.2rem;
+  padding-left: calc(50vw - 8rem);
+  margin-bottom: 1rem;
+}
+label {
+  display: inline-block;
+  width: 8rem;
+}
+
+#bg {
+  position: relative;
+  overflow: hidden;
+}
+
+#res_contain {
+  top: 8rem;
+}
+#closeBtn {
+  cursor: default;
+}
+#closeBtn:hover {
+  color: red;
+}
+
+.bg-ripple {
+  /*파동 만들기 */
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  pointer-events: none;
+  animation: bg-ripple-anim 0.9s ease-out;
+  background: rgba(150, 200, 255, 0.3); /* 파동 색 */
+}
+
+@keyframes bg-ripple-anim {
+  to {
+    transform: scale(8);
+    opacity: 0;
+  }
+}

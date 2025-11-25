@@ -12,3 +12,38 @@ h1 {
   background: darkgray;
   color: aliceblue;
 }
+#main_intro {
+  background-image: url("../img/pexels-erike.jpg");
+  height: calc(100vh - 8rem);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.content a {
+  display: block;
+  padding-left: calc(50vw - 45rem);
+  font-size: 18px;
+  margin-bottom: 1rem; /* 링크 간 간격 */
+}
+#mychar {
+  position: fixed;
+  bottom: 5rem;
+  transform: scaleX(-1);
+  animation: move 10s ease-in-out infinite;
+}
+
+@keyframes move {
+  0% {
+    left: 1rem;
+    transform: scaleX(1); /* 오른쪽 향하도록 */
+  }
+  50% {
+    left: calc(100vw - 5rem); /* 화면 오른쪽 끝 */
+    transform: scaleX(-1); /* 왼쪽 향하도록 */
+  }
+  100% {
+    left: 1rem;
+    transform: scaleX(1);
+  }
+}
