@@ -47,39 +47,26 @@
       <div
         id="res_contain"
         style="
-          width: 99vw;
-          height: calc(99vh - 8rem);
+          padding: 1rem;
+          width: calc(99vw - 1.2rem);
+          height: calc(99vh - 27rem);
           background: whitesmoke;
-          display: none;
-          position: fixed;
+          display: block;
           overflow-y: auto;
         "
-      >
-        <span
-          style="
-            position: absolute;
-            right: 0.5rem;
-            top: 0.5rem;
-            font-size: 2rem;
-          "
-          id="closeBtn"
-          class="material-symbols-outlined"
-          >cancel
-        </span>
-        <div id="anal_data"></div>
-        <div id="result" style="overflow-y: auto"></div>
-      </div>
+      ></div>
     </div>
     <div
       id="loader"
       style="
+        display: none;
         position: fixed;
         top: 0;
         left: 0;
-        height: 99vh;
-        text-align: center;
+        height: 99.5vh;
         background: yellow;
         opacity: 0.5;
+        width: 99vw;
       "
     ></div>
   </body>

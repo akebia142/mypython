@@ -44,8 +44,11 @@ def user_data():
 def ret_mainpage():
     return render_template("nlp_review.html")
 
-@app.route("/movie_review")
+@app.route("/movie_review",methods=["post"])
 def movie_review():
-    pass
+    user_data= request.get_json()
+    print(user_data)
+    user_text=user_data["user_text"]
+    return jsonify({"predict": getPredict(user_text)})
 
 app.run("127.0.0.1",4321,True)

@@ -25,11 +25,14 @@ function add_Event() {
     const conn = await fetch("/movie_review", {
       method: "post",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ usertext: send_text }),
+      body: JSON.stringify({ user_text: send_text }),
     });
     const pred_res = await conn.json();
-    print(pred_res);
+    console.log(pred_res.predict);
+    icon_ = pred_res.predict.includes("긍정") ? "💚" : "🖤";
+    res_contain.innerHTML += `<p style='margin-bottom:1rem'> 리뷰: ${send_text} <br>::: ${icon_} &nbsp;&nbsp; ${pred_res.predict}</p>`;
     loader.style.display = "none";
+    user_text.value = "";
   });
   resetbtn.addEventListener("click", () => {
     user_text.value = "";
